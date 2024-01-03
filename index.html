@@ -1,0 +1,207 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard | By Code Info</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome Cdn Link -->
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="Images/logo.jpeg" alt="" style="object-fit: fill;">
+        <span class="nav-item">DashBoard</span>
+      </div>
+      <div class="menu">
+        <ul>
+          <div class="buttonContainer">
+            <li>
+              <button onclick="showPanel(0)" class="tabs">
+                <img class="nav-icon" src="Images/home.png">
+                <span class="nav-item">Home</span>
+              </button>
+            </li>
+            <li><button onclick="showPanel(1)" class="tabs">
+                <img class="nav-icon" src="Images/add-user.png">
+                <span class="nav-item">Add Info</span>
+              </button></li>
+            <li><button onclick="showPanel(2)" class="tabs">
+                <img class="nav-icon" src="Images/writing.png">
+                <span class="nav-item">Edit-info</span>
+              </button></li>
+            <li><button onclick="showPanel(3)" class="tabs">
+                <img class="nav-icon" src="Images/page.png">
+                <span class="nav-item">Generate Timetable</span>
+              </button></li>
+            <li><a href="" class="logout tabs">
+                <img class="nav-icon" src="Images/logout.png">
+                <span class="nav-item">Log out</span>
+              </a></li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main-work">
+      <section class="tabPanel home">
+        <h1>Home</h1>
+        <div class="main-box">
+          <ul>
+            <li class="active">In progress</li>
+            <li>explore</li>
+            <li>incoming</li>
+            <li>finished</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="tabPanel Add-info">
+        <h1>Add-info</h1>
+        <div class="main-box">
+          <div class="tform">
+            <div class="text">
+              Add Teacher details
+            </div>
+            <form action="#">
+
+              <div class="form-row">
+                <div class="input-data">
+                  <input type="text" required>
+                  <div class="underline"></div>
+                  <label for="">Teacher Id</label>
+                </div>
+                <!-- <div class="input-data">
+                  <input type="text" required>
+                  <div class="underline"></div>
+                  <label for="">Website Name</label>
+                </div> -->
+              </div>
+
+              <div class="form-row">
+                <div class="input-data">
+                  <input type="text" required>
+                  <div class="underline"></div>
+                  <label for="">First Name</label>
+                </div>
+                <div class="input-data">
+                  <input type="text" required>
+                  <div class="underline"></div>
+                  <label for="">Last Name</label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="input-data textarea">
+                  <textarea rows="8" cols="80" required></textarea>
+                  <br />
+                  <div class="underline"></div>
+                  <label for="">Teachers Subjects</label>
+                  <br />
+                  <div class="form-row submit-btn">
+                    <div class="input-data">
+                      <div class="inner"></div>
+                      <input type="submit" value="submit">
+                    </div>
+                  </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="tabPanel Edit-info">
+        <h1>Edit-info</h1>
+        <div class="main-box">
+
+        </div>
+      </section>
+
+      <section class="tabPanel Generate">
+        <h1>Generate Time Table</h1>
+        <div class="main-box">
+          <table class="timetable">
+            <thead>
+                <tr>
+                    <th></th> <!-- Empty cell for spacing -->
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td id="slot1-1"></td>
+                    <td id="slot1-2"></td>
+                    <td id="slot1-3"></td>
+                    <td id="slot1-4"></td>
+                    <td id="slot1-5"></td>
+                    <td id="slot1-6"></td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td id="slot2-1"></td>
+                    <td id="slot2-2"></td>
+                    <td id="slot2-3"></td>
+                    <td id="slot2-4"></td>
+                    <td id="slot2-5"></td>
+                    <td id="slot2-6"></td>
+                </tr>
+                <tr>
+                    <td>11:15 - 12:15</td>
+                    <td id="slot3-1"></td>
+                    <td id="slot3-2"></td>
+                    <td id="slot3-3"></td>
+                    <td id="slot3-4"></td>
+                    <td id="slot3-5"></td>
+                    <td id="slot3-6"></td>
+                </tr>
+                <tr>
+                    <td>12:15 - 1:15</td>
+                    <td id="slot4-1"></td>
+                    <td id="slot4-2"></td>
+                    <td id="slot4-3"></td>
+                    <td id="slot4-4"></td>
+                    <td id="slot4-5"></td>
+                    <td id="slot4-6"></td>
+                </tr>
+                <tr>
+                    <td>2:00 - 3:00</td>
+                    <td id="slot5-1"></td>
+                    <td id="slot5-2"></td>
+                    <td id="slot5-3"></td>
+                    <td id="slot5-4"></td>
+                    <td id="slot5-5"></td>
+                    <td id="slot5-6"></td>
+                </tr>
+                <tr>
+                    <td>3:00 - 4:00</td>
+                    <td id="slot6-1"></td>
+                    <td id="slot6-2"></td>
+                    <td id="slot6-3"></td>
+                    <td id="slot6-4"></td>
+                    <td id="slot6-5"></td>
+                    <td id="slot6-6"></td>
+                </tr>
+                <!-- Add remaining time slots as needed -->
+            </tbody>
+        </table>
+            <button onclick="generateTimetable()" class="generate-button">Generate Timetable</button>
+        </div>
+    </section>
+    
+    
+
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="data.js"></script>
+  </body>
+
+  </html>
+</span>
