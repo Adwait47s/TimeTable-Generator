@@ -19,6 +19,8 @@ var timetableData = {
     
 };
 
+var timetableMatrix = [];
+var original_timetable = timetableData;
 
 function showPanel(panelIndex) {
     tabButtons.forEach(function (node) {
@@ -35,9 +37,9 @@ function showPanel(panelIndex) {
 
 function generateTimetable() {
     var daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var timetableMatrix = [];
+    
 
-    // Initialize the timetable matrix
+    // Initialization
     for (var i = 0; i < 7; i++) {
         var row = [];
 
@@ -49,7 +51,7 @@ function generateTimetable() {
     }
     console.log(timetableMatrix);
 
-    // Fill the timetable matrix
+    // Filling the timetable matrix
     
     for(var i =0;i<7;i++){
 
@@ -119,40 +121,27 @@ function generateTimetable() {
             var isLab = timetableMatrix[i][j] && timetableMatrix[i][j].lab;
     
             if (cell) {
-                
-                    cell.textContent = cellContent;
-                
+                cell.textContent = cellContent;
             } else {
                 console.error('Cell with ID ' + cellId + ' not found.');
             }
         }
     }
 }
-    //}
-    // for (var i = 0; i < daysOfWeek.length; i++) {
-    //     var colIndex = 1; // Start from the second column
 
-    //     for (var subject in timetableData) {
-    //         var subjectTurns = timetableData[subject].turns;
-    //         var connected = timetableData[subject].connected;
-
-    //         if (subjectTurns > 0) {
-    //             var colspan = connected ? subjectTurns * 2 : subjectTurns;
-
-    //             timetableMatrix[i][colIndex] = { subject: subject, colspan: colspan };
-    //             timetableData[subject].turns--;
-
-    //             // If connected, skip the next iteration as the next cell is part of the same subject
-    //             if (connected) colIndex += colspan;
-    //             else colIndex++;
-    //         }
-    //     }
-    // }
-
-    // Update the HTML table with timetableMatrix data
+function resetTimetable(){
+    timetableData = original_timetable;
+    for (var i = 0; i < 6; i++) {
+        for (var j = 0; j < 6; j++) {
+            var cellId = 'slot' + (i + 1) + '-' + (j + 1);
+            var cell = document.getElementById(cellId);
     
-
-
-
-
+            if (cell) {
+                cell.textContent = '';
+            } else {
+                console.error('Cell with ID ' + cellId + ' not found.');
+            }
+        }
+    }
+}
 showPanel(0);
