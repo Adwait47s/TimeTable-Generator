@@ -127,6 +127,7 @@ function generateTimetable() {
             }
         }
     }
+    
 }
 
 function resetTimetable(){
@@ -144,4 +145,30 @@ function resetTimetable(){
         }
     }
 }
+
+
+function showSubjects() {
+    var subjectListContainer = document.getElementById('subjectList');
+    subjectListContainer.innerHTML = '';
+
+    for (var subject in timetableData) {
+        var remainingTurns = timetableData[subject].turns;
+
+        if (remainingTurns > 0) {
+            var subjectElement = document.createElement('div');
+            subjectElement.classList.add('subject');
+            subjectElement.textContent = `${subject}:${remainingTurns}`;
+            subjectElement.draggable = true;
+
+            subjectElement.addEventListener('dragstart', function (event) {
+                event.dataTransfer.setData('text/plain', subject);
+            });
+
+            //subjectElement.textContent = subject;
+            subjectListContainer.appendChild(subjectElement);
+        }
+    }
+}
+showSubjects();
+
 showPanel(0);
