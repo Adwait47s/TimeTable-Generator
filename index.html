@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="UTF-8" />
-    <title>Dashboard | By Code Info</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- Font Awesome Cdn Link -->
   </head>
@@ -123,86 +123,87 @@
         <div class="main-box">
           <table class="timetable">
             <thead>
-                <tr>
-                    <th></th> <!-- Empty cell for spacing -->
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                </tr>
+              <tr>
+                <th></th> <!-- Empty cell for spacing -->
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>9:00 - 10:00</td>
-                    <td id="slot1-1"></td>
-                    <td id="slot1-2"></td>
-                    <td id="slot1-3"></td>
-                    <td id="slot1-4"></td>
-                    <td id="slot1-5"></td>
-                    <td id="slot1-6"></td>
-                </tr>
-                <tr>
-                    <td>10:00 - 11:00</td>
-                    <td id="slot2-1"></td>
-                    <td id="slot2-2"></td>
-                    <td id="slot2-3"></td>
-                    <td id="slot2-4"></td>
-                    <td id="slot2-5"></td>
-                    <td id="slot2-6"></td>
-                </tr>
-                <tr>
-                    <td>11:15 - 12:15</td>
-                    <td id="slot3-1"></td>
-                    <td id="slot3-2"></td>
-                    <td id="slot3-3"></td>
-                    <td id="slot3-4"></td>
-                    <td id="slot3-5"></td>
-                    <td id="slot3-6"></td>
-                </tr>
-                <tr>
-                    <td>12:15 - 1:15</td>
-                    <td id="slot4-1"></td>
-                    <td id="slot4-2"></td>
-                    <td id="slot4-3"></td>
-                    <td id="slot4-4"></td>
-                    <td id="slot4-5"></td>
-                    <td id="slot4-6"></td>
-                </tr>
-                <tr>
-                    <td>2:00 - 3:00</td>
-                    <td id="slot5-1"></td>
-                    <td id="slot5-2"></td>
-                    <td id="slot5-3"></td>
-                    <td id="slot5-4"></td>
-                    <td id="slot5-5"></td>
-                    <td id="slot5-6"></td>
-                </tr>
-                <tr>
-                    <td>3:00 - 4:00</td>
-                    <td id="slot6-1"></td>
-                    <td id="slot6-2"></td>
-                    <td id="slot6-3"></td>
-                    <td id="slot6-4"></td>
-                    <td id="slot6-5"></td>
-                    <td id="slot6-6"></td>
-                </tr>
-                <!-- Add remaining time slots as needed -->
+              <tr>
+                <td>9:00 - 10:00</td>
+                <td id="slot1-1"></td>
+                <td id="slot1-2"></td>
+                <td id="slot1-3"></td>
+                <td id="slot1-4"></td>
+                <td id="slot1-5"></td>
+                <td id="slot1-6"></td>
+              </tr>
+              <tr>
+                <td>10:00 - 11:00</td>
+                <td id="slot2-1"></td>
+                <td id="slot2-2"></td>
+                <td id="slot2-3"></td>
+                <td id="slot2-4"></td>
+                <td id="slot2-5"></td>
+                <td id="slot2-6"></td>
+              </tr>
+              <tr>
+                <td>11:15 - 12:15</td>
+                <td id="slot3-1"></td>
+                <td id="slot3-2"></td>
+                <td id="slot3-3"></td>
+                <td id="slot3-4"></td>
+                <td id="slot3-5"></td>
+                <td id="slot3-6"></td>
+              </tr>
+              <tr>
+                <td>12:15 - 1:15</td>
+                <td id="slot4-1"></td>
+                <td id="slot4-2"></td>
+                <td id="slot4-3"></td>
+                <td id="slot4-4"></td>
+                <td id="slot4-5"></td>
+                <td id="slot4-6"></td>
+              </tr>
+              <tr>
+                <td>2:00 - 3:00</td>
+                <td id="slot5-1"></td>
+                <td id="slot5-2"></td>
+                <td id="slot5-3"></td>
+                <td id="slot5-4"></td>
+                <td id="slot5-5"></td>
+                <td id="slot5-6"></td>
+              </tr>
+              <tr>
+                <td>3:00 - 4:00</td>
+                <td id="slot6-1"></td>
+                <td id="slot6-2"></td>
+                <td id="slot6-3"></td>
+                <td id="slot6-4"></td>
+                <td id="slot6-5"></td>
+                <td id="slot6-6"></td>
+              </tr>
+              <!-- Add remaining time slots as needed -->
             </tbody>
-        </table>
-        <button onclick="generateTimetable()" class="generate-button">Generate Timetable</button>
-        <button onclick="resetTimetable()" class="reset-button">Reset</button>
-        <div id="subjectList" class="subject-list">
-          <!-- Subject list will be displayed here dynamically -->
-      </div>
-    </div>
-    
-</div>
-</section>
-</div>
+          </table>
+          <button onclick="generateTimetable()" class="generate-button">Generate Timetable</button>
+          <button onclick="resetTimetable()" class="reset-button">Reset</button>
+          <div id="subjectList" class="subject-list">
+            <!-- Subject list will be displayed here dynamically -->
+          </div>
+        </div>
 
-<script src="script.js"></script>
-<script type="module" src="data.js"></script>
-</body>
-</html>
+    </div>
+    </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="data.js"></script>
+  </body>
+
+  </html>
