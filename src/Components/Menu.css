@@ -1,0 +1,52 @@
+.HamMenu {
+    /* border: 1px solid gray; */
+    border-radius: 20px;
+    width: 20%;
+    height: 96%;
+    margin: 10px 5px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px #acacad;
+    /* position: fixed; */
+}
+
+.HamMenu .tab {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+}
+
+.HamMenu li .tab {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+/* 
+.HamMenu li :hover {
+    color: #0081C9;
+} */
+
+.HamMenu .tab a {
+    margin-left: 3px;
+}
+
+.HamMenu .tab span {
+    text-align: left;
+    /* padding: 5px 5px 5px 15px; */
+    width: 100%;
+}
+
+.active-tab {
+    /* border: 2px solid green; */
+    border-radius: 20px;
+    background-color: #0081C9;
+    color: white;
+    box-shadow: 1px 1px 5px 1px #a5a5a9;
+    translate: 5px;
+}

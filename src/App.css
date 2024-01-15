@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;900&display=swap');
+
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+.App {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fefefe;
+}
+
+.Head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
+  border-bottom: 1px solid gray;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 20px 1px #acacad;
+  /* position: fixed;
+  width: 100%; */
+}
+
+.Head img {
+  height: 50px;
+  margin: 5px 5px 5px 10px;
+}
+
+.Head span {
+  text-align: center;
+  width: 100%;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.Main {
+  height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-grow: 1;
+  /* border: 2px solid blue; */
+}
+
+.not-cnt {
+  display: none;
+}
+
+.active-cnt {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid green; */
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  min-height: 96%;
+  float: left;
+  margin: 10px 10px 10px 5px;
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  box-shadow: 1px 1px 20px 1px #acacad;
+  /* position:; */
+}
+
+.active-cnt h1 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 500;
+}
