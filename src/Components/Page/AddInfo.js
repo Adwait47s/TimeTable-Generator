@@ -172,7 +172,7 @@ const AddInfo = () => {
                                             )
                                         })}
                                     </select>
-                                    {!(lect.length === 1) && <button onClick={() => { remSubject(index) }} className="text-red-500"><IoRemoveCircleOutline size={30} /></button>}
+                                    { <button onClick={() => { remSubject(index) }} className="text-red-500"><IoRemoveCircleOutline size={30} /></button>}
                                 </li>
                             )
                         })}
@@ -207,7 +207,7 @@ const AddInfo = () => {
                                         <option value="2">Associate</option>
                                         <option value="3">Assistant</option>
                                     </select>
-                                    {!(lect.length === 1) && <button onClick={() => { remSubject(index) }} className="text-red-500"><IoRemoveCircleOutline size={30} /></button>}
+                                    { <button onClick={() => { remlab(index) }} className="text-red-500"><IoRemoveCircleOutline size={30} /></button>}
                                 </li>
                             )
                         })}
