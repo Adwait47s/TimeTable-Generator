@@ -38,6 +38,8 @@ const TimetableCell = ({ rowIndex, colIndex, onDrop, content }) => {
 
 const Gen = () => {
   const initialTimetableData = {
+    // TE1 : INTINALTALDATA
+    // TE2 : 
     CNSL: { turns: 4, connected: true, isLab: true, isDone: false },
     CCL: { turns: 2, connected: true, isLab: true, isDone: false },
     DSBDAL: { turns: 2, connected: true, isLab: true, isDone: false },
@@ -54,6 +56,7 @@ const Gen = () => {
   };
 
   const [timetableData, setTimetableData] = useState({ ...initialTimetableData });
+  // timetableMatrix should be in backend
   const [timetableMatrix, setTimetableMatrix] = useState(Array.from({ length: 7 }, () => Array(7).fill('')));
 
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -186,6 +189,13 @@ const Gen = () => {
       return newMatrix;
     });
   };
+  const downloadTimetable = () =>{
+
+  }
+
+  const saveTimetable = () =>{
+
+  }
 
   return (
     <DndProvider backend={HTML5Backend}>
@@ -206,7 +216,8 @@ const Gen = () => {
             </div>
           ))}
         </div>
-        <div className="flex space-x-4 mt-6">
+        <div className="flex justify-between mt-6">
+        <div className="flex space-x-4">
           <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={generateTimetable}>
             Generate Timetable
           </button>
@@ -214,6 +225,15 @@ const Gen = () => {
             Reset Timetable
           </button>
         </div>
+        <div className="flex space-x-4">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={downloadTimetable}>
+            Download
+          </button>
+          <button className="bg-green-500 text-white px-4 py-2 rounded" onClick={saveTimetable}>
+            Save
+          </button>
+        </div>
+      </div>
         <div className="mt-8">
           <h2 className="text-xl font-bold mb-2">Remaining Subjects</h2>
           <div className="flex flex-wrap">
